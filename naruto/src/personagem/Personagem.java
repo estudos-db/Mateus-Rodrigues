@@ -1,5 +1,5 @@
 package personagem;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Personagem {
@@ -7,11 +7,8 @@ public class Personagem {
     private String nome;
     private int idade;
     private String aldeia;
-    private List<String> jutsus;
+    private List<String> jutsus = new ArrayList<>();
     private int chakra;
-
-    public Personagem() {
-    }
 
     public Personagem(String nome, int idade, String aldeia, List<String> jutsus, int chakra) {
         this.nome = nome;
@@ -59,5 +56,30 @@ public class Personagem {
 
     public void setChakra(int chakra) {
         this.chakra = chakra;
+    }
+
+    public List<String> adicionaJutsu(String nomeJutsu){
+
+        jutsus.add(nomeJutsu);
+        System.out.println("Você adicionou o jutsu: " + jutsus);
+
+        return jutsus;
+    }
+
+    public int aumentaChakra(int valorChakra){
+
+        chakra = this.getChakra() + valorChakra;
+        System.out.println("Você aumentou o seu Chakra em: " + chakra);
+
+        return chakra;
+    }
+
+    public void informacoesPersonagem( ){
+        System.out.println("Informações personagem: " +
+                            "\nNome: "+ getNome() +" " +
+                            "\nIdade: "+ getIdade() +
+                            "\nAldeia: "+ getAldeia() +
+                            "\nJutsu: "+  getJutsus()
+                            + "\nChakra: " + getChakra());
     }
 }
