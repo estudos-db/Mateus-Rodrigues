@@ -1,12 +1,14 @@
-import tipos_ninja.NinjaDeGenjutsu;
-import tipos_ninja.NinjaDeNinjutsu;
-import tipos_ninja.NinjaDeTaijutsu;
+package naruto.src;
+
+import naruto.src.tipos_ninja.NinjaDeGenjutsu;
+import naruto.src.tipos_ninja.NinjaDeNinjutsu;
+import naruto.src.tipos_ninja.NinjaDeTaijutsu;
 
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        NinjaDeTaijutsu ninjaDeTaijutsu = new NinjaDeTaijutsu("Mateus", 28, "Água", new ArrayList<>(), 5 );
+        NinjaDeTaijutsu ninjaDeTaijutsu = new NinjaDeTaijutsu("Mateus", 28, "Agua", new ArrayList<>(), 5 );
 
         ninjaDeTaijutsu.aumentaChakra(10);
         ninjaDeTaijutsu.adicionaJutsu("Suiton");
