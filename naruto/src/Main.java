@@ -3,7 +3,6 @@ import tipos_ninja.NinjaDeNinjutsu;
 import tipos_ninja.NinjaDeTaijutsu;
 
 import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -31,9 +30,6 @@ public class Main {
         ninjaDeGenjutsu.desviar("Lado");
         ninjaDeGenjutsu.informacoesPersonagem();
         ninjaDeGenjutsu.usarJutsu();
-
-
-
 
     }
 }
