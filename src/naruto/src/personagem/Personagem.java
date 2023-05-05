@@ -61,7 +61,7 @@ public class Personagem {
     public List<String> adicionaJutsu(String nomeJutsu){
 
         jutsus.add(nomeJutsu);
-        System.out.println("Você adicionou o jutsu: " + jutsus);
+        System.out.println("Voce adicionou o jutsu: " + jutsus);
 
         return jutsus;
     }
@@ -69,17 +69,18 @@ public class Personagem {
     public int aumentaChakra(int valorChakra){
 
         chakra = this.getChakra() + valorChakra;
-        System.out.println("Você aumentou o seu Chakra em: " + chakra);
+        System.out.println("Voce aumentou o seu Chakra em: " + chakra);
 
         return chakra;
     }
 
     public void informacoesPersonagem( ){
-        System.out.println("Informações personagem: " +
-                            "\nNome: "+ getNome() +" " +
+        System.out.println("Informacoes personagem: " +
+                            "\nNome: "+ getNome()  +
                             "\nIdade: "+ getIdade() +
                             "\nAldeia: "+ getAldeia() +
                             "\nJutsu: "+  getJutsus()
                             + "\nChakra: " + getChakra());
+
     }
 }
