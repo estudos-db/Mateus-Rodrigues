@@ -18,7 +18,7 @@ public class NinjaDeTaijutsuTest {
         jutsus.add("Suiton");
         NinjaDeTaijutsu ninjaDeTaijutsu = new NinjaDeTaijutsu("Mateus",28, "tres",
                 jutsus,5 );
-        assertEquals("Usando o Taitambém jutsu",ninjaDeTaijutsu.usarJutsu());
+        assertEquals("Usando o Taijutsu",ninjaDeTaijutsu.usarJutsu());
     }
 
     @Test
