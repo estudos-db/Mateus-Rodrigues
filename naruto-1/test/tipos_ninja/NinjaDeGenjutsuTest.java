@@ -1,7 +1,7 @@
-package src.naruto.src.tipos_ninja;
+package tipos_ninja;
 
 import jdk.jfr.Label;
-import naruto.src.tipos_ninja.NinjaDeGenjutsu;
+import tipos_ninja.NinjaDeGenjutsu;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

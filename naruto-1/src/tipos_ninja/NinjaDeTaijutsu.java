@@ -1,7 +1,7 @@
-package naruto.src.tipos_ninja;
+package tipos_ninja;
 
-import naruto.src.interfaces.NinjaInterface;
-import naruto.src.personagem.Personagem;
+import interfaces.NinjaInterface;
+import personagem.Personagem;
 
 import java.util.List;
 

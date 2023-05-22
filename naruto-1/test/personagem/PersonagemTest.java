@@ -1,7 +1,7 @@
-package src.naruto.src.personagem;
+package personagem;
 
 import jdk.jfr.Label;
-import naruto.src.personagem.Personagem;
+import personagem.Personagem;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

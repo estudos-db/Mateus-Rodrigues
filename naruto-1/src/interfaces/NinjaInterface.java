@@ -1,4 +1,4 @@
-package naruto.src.interfaces;
+package interfaces;
 
 public interface NinjaInterface {
 

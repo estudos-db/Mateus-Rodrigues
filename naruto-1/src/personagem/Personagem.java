@@ -1,4 +1,4 @@
-package naruto.src.personagem;
+package personagem;
 import java.util.ArrayList;
 import java.util.List;
 

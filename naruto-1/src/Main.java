@@ -1,8 +1,6 @@
-package naruto.src;
-
-import naruto.src.tipos_ninja.NinjaDeGenjutsu;
-import naruto.src.tipos_ninja.NinjaDeNinjutsu;
-import naruto.src.tipos_ninja.NinjaDeTaijutsu;
+import tipos_ninja.NinjaDeGenjutsu;
+import tipos_ninja.NinjaDeNinjutsu;
+import tipos_ninja.NinjaDeTaijutsu;
 
 import java.util.ArrayList;
 public class Main {
