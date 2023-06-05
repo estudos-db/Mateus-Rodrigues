@@ -79,8 +79,8 @@ public class Personagem {
                             "\nNome: "+ getNome()  +
                             "\nIdade: "+ getIdade() +
                             "\nAldeia: "+ getAldeia() +
-                            "\nJutsu: "+  getJutsus()
-                            + "\nChakra: " + getChakra());
+                            "\nJutsu: "+  getJutsus() +
+                            "\nChakra: " + getChakra());
 
     }
 }
