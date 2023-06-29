@@ -1,13 +1,11 @@
-package com.person.crud.service;
+package com.person.crud.services;
 
 
 import com.person.crud.dto.PessoaDto;
 import com.person.crud.mappers.PessoaMapper;
 import com.person.crud.model.Pessoa;
-import com.person.crud.repositories.EnderecoRepository;
 import com.person.crud.repositories.PessoaRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,11 +16,12 @@ import java.util.stream.Collectors;
 @Service
 public class PessoaService {
 
-    @Autowired
+
     private PessoaRepository pessoaRepository;
 
-    @Autowired
-    private EnderecoRepository enderecoRepository;
+    public PessoaService(PessoaRepository pessoaRepository) {
+        this.pessoaRepository = pessoaRepository;
+    }
 
 
     public List<PessoaDto> getAllPessoas(){
@@ -62,20 +61,7 @@ public class PessoaService {
         if (pessoaOptional.isPresent()) {
             pessoaRepository.delete(pessoaOptional.get());
         } else {
-            throw new RuntimeException("Pessoa não encontrada");
+            throw new IllegalArgumentException("Pessoa nao encontrada, esse ID pode nao estar cadastrado em nosso banco de dados! ");
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

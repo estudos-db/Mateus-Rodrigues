@@ -6,21 +6,21 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EnderecoMapper {
+public interface EnderecoMapper {
 
-    public static EnderecoDto toDto(Endereco endereco){
+    static EnderecoDto toDto(Endereco endereco) {
         EnderecoDto enderecoDto = new EnderecoDto();
         BeanUtils.copyProperties(endereco, enderecoDto);
         return enderecoDto;
     }
 
-    public static Endereco toEntity(EnderecoDto enderecoDTO) {
+    static Endereco toEntity(EnderecoDto enderecoDTO) {
         Endereco endereco = new Endereco();
         BeanUtils.copyProperties(enderecoDTO, endereco);
         return endereco;
     }
 
-    public static void updateEntityFromDTO(EnderecoDto enderecoDTO, Endereco endereco) {
+    static void updateEntityFromDTO(EnderecoDto enderecoDTO, Endereco endereco) {
         BeanUtils.copyProperties(enderecoDTO, endereco, "id");
     }
 
