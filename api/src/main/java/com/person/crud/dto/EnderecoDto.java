@@ -1,11 +1,12 @@
 package com.person.crud.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 
 @Data
+@NotBlank
 public class EnderecoDto {
-    private Long id;
     private String rua;
     private String numero;
     private String bairro;
