@@ -1,7 +1,7 @@
 package com.person.crud.mappers;
 
 import com.person.crud.dto.EnderecoDto;
-import com.person.crud.model.Endereco;
+import com.person.crud.models.Endereco;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 

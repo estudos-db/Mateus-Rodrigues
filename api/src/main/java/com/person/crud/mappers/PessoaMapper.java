@@ -1,7 +1,7 @@
 package com.person.crud.mappers;
 
 import com.person.crud.dto.PessoaDto;
-import com.person.crud.model.Pessoa;
+import com.person.crud.models.Pessoa;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 

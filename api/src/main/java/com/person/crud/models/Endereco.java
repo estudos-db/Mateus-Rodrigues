@@ -1,4 +1,4 @@
-package com.person.crud.model;
+package com.person.crud.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -21,5 +21,4 @@ public class Endereco {
     @ManyToOne
     @JoinColumn(name = "pessoa_id")
     private Pessoa pessoa;
-
 }
