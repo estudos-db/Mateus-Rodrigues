@@ -1,4 +1,4 @@
-package com.person.crud.model;
+package com.person.crud.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -15,13 +15,14 @@ public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank
+    @NotBlank(message = "Campo Nome obrigatório")
     @Column(length = 120)
     private String nome;
 
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
 
+    @NotBlank(message = "Campo CPF obrigatório")
     @Column(length = 11)
     private String cpf;
 

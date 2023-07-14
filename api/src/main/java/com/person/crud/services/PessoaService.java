@@ -1,9 +1,8 @@
 package com.person.crud.services;
 
-
 import com.person.crud.dto.PessoaDto;
 import com.person.crud.mappers.PessoaMapper;
-import com.person.crud.model.Pessoa;
+import com.person.crud.models.Pessoa;
 import com.person.crud.repositories.PessoaRepository;
 
 import org.springframework.stereotype.Service;
@@ -24,7 +23,7 @@ public class PessoaService {
     }
 
 
-    public List<PessoaDto> getAllPessoas(){
+    public List<PessoaDto> getAllPessoas() {
         List<Pessoa> pessoas = pessoaRepository.findAll();
         return pessoas.stream()
                 .map(PessoaMapper::toDTO)
@@ -36,7 +35,7 @@ public class PessoaService {
         if (pessoaOptional.isPresent()) {
             return PessoaMapper.toDTO(pessoaOptional.get());
         }
-        throw new RuntimeException("Pessoa não encontrada");
+        throw new IllegalArgumentException("Pessoa não encontrada, id não esta presente no banco de dados");
     }
 
     public PessoaDto criarPessoa(PessoaDto pessoaDTO) {
@@ -53,7 +52,7 @@ public class PessoaService {
             Pessoa pessoaAtualizada = pessoaRepository.save(pessoa);
             return PessoaMapper.toDTO(pessoaAtualizada);
         }
-        throw new RuntimeException("Pessoa não encontrada");
+        throw new IllegalArgumentException("Pessoa não encontrada, esse ID nao se encontra em nossa base de dados");
     }
 
     public void excluirPessoa(Long pessoaId) {
@@ -61,7 +60,7 @@ public class PessoaService {
         if (pessoaOptional.isPresent()) {
             pessoaRepository.delete(pessoaOptional.get());
         } else {
-            throw new IllegalArgumentException("Pessoa nao encontrada, esse ID pode nao estar cadastrado em nosso banco de dados! ");
+            throw new IllegalArgumentException("Pessoa nao encontrada, esse ID pode nao estar cadastrado em nosso banco de dados");
         }
     }
 }
