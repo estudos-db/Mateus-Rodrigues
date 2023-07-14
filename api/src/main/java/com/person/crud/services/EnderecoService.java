@@ -1,6 +1,7 @@
 package com.person.crud.services;
 
 import com.person.crud.dto.EnderecoDto;
+import com.person.crud.exception.NotFoundException;
 import com.person.crud.mappers.EnderecoMapper;
 import com.person.crud.models.Endereco;
 import com.person.crud.repositories.EnderecoRepository;
@@ -54,11 +55,12 @@ public class EnderecoService {
     }
 
     public void excluirEndereco(Long id){
-        Optional<Endereco> enderecoOptional = enderecoRepository.findById(id);
+        Optional<Endereco> enderecoOptional = Optional.ofNullable(enderecoRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Endereco nao encontrado")));
         if (enderecoOptional.isPresent()) {
             enderecoRepository.delete(enderecoOptional.get());
         }else {
-            throw new IllegalArgumentException("Pessoa nao encontrada, esse ID pode nao estar cadastrado em nosso banco de dados!");
+            throw new IllegalArgumentException("Endereco nao encontrado, esse ID pode nao estar cadastrado em nosso banco de dados!");
         }
     }
 }

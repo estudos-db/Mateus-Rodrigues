@@ -10,11 +10,11 @@ import java.util.List;
 @Data
 public class PessoaDto {
 
-    @NotBlank(message = "O nome é um campo obrigatório")
+    @NotBlank(message = "Campo Nome obrigatório")
     private String nome;
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
-    @NotBlank(message = "O CPF é um campo obrigatório")
+    @NotBlank(message = "Campo CPF obrigatório")
     private String cpf;
     private List<EnderecoDto> enderecoDto;
 }

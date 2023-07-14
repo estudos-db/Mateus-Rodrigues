@@ -17,7 +17,6 @@ public class Endereco {
     private String cidade;
     private String estado;
     private String cep;
-
     @ManyToOne
     @JoinColumn(name = "pessoa_id")
     private Pessoa pessoa;
